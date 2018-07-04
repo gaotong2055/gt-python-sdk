@@ -109,7 +109,7 @@ class GeetestLib(object):
             return 0
 
     def _post_values(self, apiserver, data):
-        response = requests.post(apiserver, data)
+        response = requests.post(apiserver, data, timeout=3)
         return response.text
 
     def _check_result(self, origin, validate):
